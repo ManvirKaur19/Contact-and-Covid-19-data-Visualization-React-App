@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Contact and COVID-19 Visualization App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project provides an interface for managing contact information and visualizing COVID-19 data across the globe. It combines a CRUD interface for contacts with interactive charts and maps to display historical COVID-19 data.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+You can view a live version of the app at: [Contact and COVID-19 Visualization App](https://manvir-kaur-contact-and-covid19-vis.netlify.app/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Contact Management:** Add, view, and update personal contact information.
+- **COVID-19 Charts and Maps:** Visualize historical data on COVID-19 using interactive charts and geographical maps.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React.js:** A JavaScript library for building user interfaces.
+- **TypeScript:** An open-source language that builds on JavaScript by adding static type definitions, which helps in catching errors early through a more robust syntax before code is run or during compile time.
+- **React Router:** Manages routing for the application, enabling navigation among different components and synchronizing the UI with the URL.
+- **React Query:** Used for fetching, caching, and updating data in the app, simplifying state management related to asynchronous data operations.
+- **Tailwind CSS:** A utility-first CSS framework used for rapidly building custom user interfaces directly in your markup.
+- **Recharts:** A Redefined chart library built with React and D3, used for rendering custom charts.
+- **Leaflet:** An open-source JavaScript library for mobile-friendly interactive maps.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API Integration
 
-### `npm run build`
+- **COVID-19 data:** The app fetches historical data and current statistics about COVID-19 cases from the [Disease.sh API](https://disease.sh/docs/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Router Endpoints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This application uses React Router for navigation between components. Here are the main routes:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `/` - **ContactsPage:** The main page for contact management where users can view and edit their contacts.
+- `/create-contact` - **CreateContactPage:** Allows users to add new contacts.
+- `/charts-and-maps` - **ChartsAndMapsPage:** Displays interactive charts and maps with COVID-19 data.
 
-### `npm run eject`
+## Installation and Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clone the repository, install dependencies, and start the local server:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/ManvirKaur19/Contact-and-Covid-19-data-Visualization-React-App.git
+cd Contact-and-Covid-19-data-Visualization-React-App
+npm install
+npm start
+```
+This will run the app in the development mode. Open http://localhost:3000 to view it in your browser.
