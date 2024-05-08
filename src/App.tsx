@@ -1,25 +1,33 @@
+// App.tsx
+
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ContactsPage from './pages/ContactsPage';
+import ChartsAndMapsPage from './pages/ChartsAndMapsPage';
+import Sidebar from './components/SideBar';
+import CreateContactPage from './pages/CreateContactPage';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 
 function App() {
+  const queryClient = new QueryClient()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient} contextSharing={true}>
+    <Router>
+      <div className="flex">
+        <div className='bg-gray-800'>
+          <Sidebar />
+        </div>
+        
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<ContactsPage />} />
+            <Route path="/create-contact" element={<CreateContactPage />} />
+            <Route path="/charts-and-maps" element={<ChartsAndMapsPage />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+    </QueryClientProvider>
   );
 }
 
